@@ -1,0 +1,13 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MovieApp</string>
+
+    <!-- The runtime format -->
+    <string name="format_runtime">
+        <xliff:g id="hours">%01d</xliff:g>h\u0020
+        <xliff:g id="minutes">%01d</xliff:g>m
+    </string>
+    <string name="format_runtime_hours">
+        <xliff:g id="hours">%01d</xliff:g>h
+    </string>
+
+</resources>
