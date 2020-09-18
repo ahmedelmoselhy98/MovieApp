@@ -8,6 +8,7 @@
             name="viewModel"
             type="com.example.movieapp.ui.main.MovieViewModel" />
 
+
     </data>
 
     <FrameLayout

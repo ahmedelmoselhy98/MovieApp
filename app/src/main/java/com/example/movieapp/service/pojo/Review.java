@@ -1,4 +1,4 @@
-package com.example.movieapp.pojo;
+package com.example.movieapp.service.pojo;
 
 public class Review {
 

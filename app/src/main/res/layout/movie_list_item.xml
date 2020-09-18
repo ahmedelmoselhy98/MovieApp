@@ -4,13 +4,14 @@
     <data>
         <variable
             name="movie"
-            type="com.example.movieapp.pojo.Movie" />
+            type="com.example.movieapp.service.pojo.Movie" />
 
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"

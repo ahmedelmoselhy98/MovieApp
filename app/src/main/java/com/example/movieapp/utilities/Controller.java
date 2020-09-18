@@ -1,5 +1,7 @@
 package com.example.movieapp.utilities;
 
+import com.example.movieapp.service.repository.MovieApi;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

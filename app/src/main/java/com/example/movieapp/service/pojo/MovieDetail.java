@@ -1,4 +1,4 @@
-package com.example.movieapp.pojo;
+package com.example.movieapp.service.pojo;
 
 import java.util.List;
 

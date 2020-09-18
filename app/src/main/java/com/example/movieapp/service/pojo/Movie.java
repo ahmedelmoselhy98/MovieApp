@@ -1,4 +1,4 @@
-package com.example.movieapp.pojo;
+package com.example.movieapp.service.pojo;
 
 import android.widget.ImageView;
 
@@ -133,6 +133,11 @@ public class Movie {
     // important code for loading image here
     @BindingAdapter({ "movieImage" })
     public static void loadImage(ImageView image, String imageURL) {
+        if(!imageURL.isEmpty()){
         Picasso.get().load(Constant.IMAGE_BASE_URL+ imageURL).into(image);
-    }
+        }else {
+            image.setImageResource(R.drawable.no_image);
+        }
+
+        }
 }

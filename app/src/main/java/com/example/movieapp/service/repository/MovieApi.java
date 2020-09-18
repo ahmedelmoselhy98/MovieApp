@@ -1,12 +1,12 @@
-package com.example.movieapp.utilities;
+package com.example.movieapp.service.repository;
 
 
-import com.example.movieapp.pojo.Credits;
-import com.example.movieapp.pojo.Movie;
-import com.example.movieapp.pojo.MovieDetail;
-import com.example.movieapp.pojo.MovieRespone;
-import com.example.movieapp.pojo.ReviewRespone;
-import com.example.movieapp.pojo.VideoRespone;
+import com.example.movieapp.service.pojo.Credits;
+import com.example.movieapp.service.pojo.Movie;
+import com.example.movieapp.service.pojo.MovieDetail;
+import com.example.movieapp.service.pojo.MovieRespone;
+import com.example.movieapp.service.pojo.ReviewRespone;
+import com.example.movieapp.service.pojo.VideoRespone;
 
 import java.util.List;
 

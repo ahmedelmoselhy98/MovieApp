@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.movieapp.R;
 import com.example.movieapp.databinding.ActivityMainBinding;
-import com.example.movieapp.pojo.Movie;
+import com.example.movieapp.service.pojo.Movie;
 
 import java.util.List;
 
@@ -20,15 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
     MovieViewModel movieModelView;
     MovieAdapter movieAdapter = new MovieAdapter();
+    ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setViewModel(movieModelView);
         binding.setLifecycleOwner(this);
-
 //        MovieApi movieApi = Controller.getClient().create( MovieApi.class);
 //        movieApi.getMovies("popular",API_KEY,LANGUAGE,PAGE).enqueue(new Callback<MovieRespone>() {
 //            @Override
@@ -117,9 +118,11 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
         movieModelView = ViewModelProviders.of(this).get(MovieViewModel.class);
-        movieModelView.getMovies();
-        movieModelView.movieLiveData.getValue();
-        movieModelView.movieLiveData.observe(this, new Observer<List<Movie>>() {
+        observeMovieData();
+    }
+
+    private void observeMovieData(){
+        movieModelView.getMovies().observe(this, new Observer<List<Movie>>() {
             @Override
             public void onChanged(List<Movie> movies) {
                 if (!movies.isEmpty()) {
@@ -131,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
 

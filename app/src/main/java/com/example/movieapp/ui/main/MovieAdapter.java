@@ -1,11 +1,7 @@
 package com.example.movieapp.ui.main;
 
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -14,9 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.movieapp.R;
 import com.example.movieapp.databinding.MovieListItemBinding;
-import com.example.movieapp.pojo.Movie;
-import com.example.movieapp.utilities.Constant;
-import com.squareup.picasso.Picasso;
+import com.example.movieapp.service.pojo.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +24,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        MovieListItemBinding movieListItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.movie_list_item,parent,false);
+//        MovieListItemBinding movieListItemBinding
+//                = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.movie_list_item,parent,false);
+
+        MovieListItemBinding movieListItemBinding
+                = MovieListItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
 
         return new MovieViewHolder(movieListItemBinding);
     }

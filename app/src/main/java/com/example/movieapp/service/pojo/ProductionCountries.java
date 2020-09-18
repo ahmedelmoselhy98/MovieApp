@@ -1,4 +1,4 @@
-package com.example.movieapp.pojo;
+package com.example.movieapp.service.pojo;
 
 public class ProductionCountries {
     private String iso_3166_1,name;

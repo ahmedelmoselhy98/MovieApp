@@ -1,7 +1,6 @@
-package com.example.movieapp.ui;
+package com.example.movieapp.ui.review;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -10,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.movieapp.R;
 import com.example.movieapp.databinding.ReviewListItemBinding;
-import com.example.movieapp.pojo.Review;
+import com.example.movieapp.service.pojo.Review;
 
 import java.util.ArrayList;
 import java.util.List;
